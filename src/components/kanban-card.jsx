@@ -37,7 +37,7 @@ export const KanbanCard = ({
 
       <div className="flex justify-between items-end px-2 py-2">
         <button className="h-8 w-16 bg-black text-white">sit</button>
-        <span>{item.expiresAt.toISOString().substr(0, 10)}</span>
+        <span className="text-xs">{item.expiresAt.toISOString().substr(0, 10)}</span>
       </div>
 
     </div>

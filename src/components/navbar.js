@@ -10,7 +10,7 @@ export const Navbar = ({ pageTitle, navbarLinks }) => {
 
       <Link className="font-extrabold text-2xl" to={routes.landing}>{pageTitle}</Link>
 
-      <span className="flex justify-end items-center invisible md:visible">
+      <span className="flex justify-end items-center hidden md:flex">
         {navbarLinks.map(
           (lnk, i) =>
             <Link to={lnk.url} className="px-2 hover:underline" key={i}>

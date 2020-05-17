@@ -20,7 +20,7 @@ export const Toolbar = ({
         />
       </span>
 
-      <span className="flex justify-end items-center ml-auto mb-1">
+      <span className="flex justify-end items-center md:ml-auto mb-1">
         <span className="border border-black mr-5">
           <button className="border border-black h-8 w-8 p-1">
             <i className="material-icons text-2xl">select_all</i>
