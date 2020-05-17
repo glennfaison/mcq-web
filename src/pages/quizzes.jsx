@@ -1,12 +1,7 @@
 import React from 'react';
 
 import { AuthedLayout, ListviewHOC } from '../layouts';
-
-const navbarLinks = [
-  { text: 'Link #1', url: '#', icon: '' },
-  { text: 'Link #2', url: '#', icon: '' },
-  { text: 'Link #3', url: '#', icon: '' },
-];
+import { navbarLinks } from '../constants';
 
 const listItems = new Array(11).fill().map((v, i) => {
   return {

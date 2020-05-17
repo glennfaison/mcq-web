@@ -1,9 +1,13 @@
 import React from 'react';
 
+import { AuthedLayout } from '../layouts';
+import { navbarLinks } from '../constants';
+
 export const Dashboard = () => {
   return (
-    <>
-      <h1>User Dashboard Page.</h1>
-    </>
+    <AuthedLayout
+      pageTitle={process.env.REACT_APP_TITLE}
+      navbarLinks={navbarLinks}
+    />
   );
 };
