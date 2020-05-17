@@ -19,7 +19,7 @@ export const AuthedLayout = ({
 }) => {
 
   return (
-    <div className="flex flex-row max-h-screen">
+    <div className="flex flex-row h-screen">
 
       {/* Sidebar */}
       <div className="flex flex-col items-stretch
@@ -41,7 +41,7 @@ export const AuthedLayout = ({
       {/* End Sidebar */}
 
       {/* Main Content */}
-      <div className="flex flex-col mx-4">
+      <div className="flex flex-col mx-4 w-full">
 
         <Navbar pageTitle={pageTitle} navbarLinks={navbarLinks} />
         <ListviewHOC listItems={listItems} />

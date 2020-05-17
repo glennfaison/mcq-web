@@ -8,9 +8,11 @@ export const Toolbar = ({
   onBulkDelete = () => {},
 }) => {
   return (
-    <div className="flex items-center justify-between py-2 flex-wrap">
+    <div className="flex py-2 flex-wrap">
 
-      <span className="relative flex items-center w-full max-w-xs">
+      <span className="relative flex items-center
+        flex-grow md:flex-grow-0
+        mb-1">
         <i className="material-icons text-2xl absolute pl-1">search</i>
         <input type="search"
           className="border-2 border-black h-8 p-1 pl-6 w-full"
@@ -18,7 +20,7 @@ export const Toolbar = ({
         />
       </span>
 
-      <span className="flex justify-end items-center ml-auto">
+      <span className="flex justify-end items-center ml-auto mb-1">
         <span className="border border-black mr-5">
           <button className="border border-black h-8 w-8 p-1">
             <i className="material-icons text-2xl">select_all</i>
