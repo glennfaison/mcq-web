@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AuthedLayout } from '../layouts';
+import { AuthedLayout, ListviewHOC } from '../layouts';
 
 const navbarLinks = [
   { text: 'Link #1', url: '#', icon: '' },
@@ -23,7 +23,7 @@ export const Quizzes = () => {
     <AuthedLayout
       pageTitle={process.env.REACT_APP_TITLE}
       navbarLinks={navbarLinks}
-      listItems={listItems}
+      content={<ListviewHOC listItems={listItems} />}
     />
   );
 };

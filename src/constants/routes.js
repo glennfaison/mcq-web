@@ -1,10 +1,13 @@
 export const routes = {
+  courses: '/courses',
+  dashboard: '/dashboard',
+  error: '/error',
   landing: '/register',
   login: '/login',
-  register: '/register',
-  error: '/error',
   notFound: '/not-found',
-  dashboard: '/dashboard',
   quizzes: '/quizzes',
-  root: '/'
+  register: '/register',
+  root: '/',
+  settings: '/settings',
+  topics: '/topics',
 };
