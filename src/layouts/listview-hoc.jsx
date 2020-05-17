@@ -28,7 +28,7 @@ export const ListviewHOC = ({
         onLayoutChange={setLayoutId}
         hasSelection={hasSelection}
       />
-      <div className="flex-grow overflow-y-scroll">
+      <div className="flex-grow overflow-y-scroll px-4">
         <SelectedLayout
           listItems={formattedItems}
           onSelectionChanged={setHasSelection}

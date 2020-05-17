@@ -6,7 +6,7 @@ import { routes } from '../constants';
 export const Navbar = ({ pageTitle, navbarLinks }) => {
   const { thisUser } = useContext(AppContext);
   return (
-    <div className="flex items-center justify-between py-2 h-16 border-b-2 border-black">
+    <div className="flex items-center justify-between py-2 h-16 border-b-2 border-black mx-4">
 
       <Link className="font-extrabold text-2xl" to={routes.landing}>{pageTitle}</Link>
 

@@ -8,7 +8,7 @@ export const Toolbar = ({
   onBulkDelete = () => {},
 }) => {
   return (
-    <div className="flex py-2 flex-wrap">
+    <div className="flex py-2 flex-wrap mx-4">
 
       <span className="relative flex items-center
         flex-grow md:flex-grow-0

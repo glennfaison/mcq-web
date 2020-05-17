@@ -41,7 +41,7 @@ export const AuthedLayout = ({
       {/* End Sidebar */}
 
       {/* Main Content */}
-      <div className="flex flex-col mx-4 w-full">
+      <div className="flex flex-col w-full">
 
         <Navbar pageTitle={pageTitle} navbarLinks={navbarLinks} />
         <ListviewHOC listItems={listItems} />
