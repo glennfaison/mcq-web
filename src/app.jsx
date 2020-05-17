@@ -2,7 +2,7 @@ import React, { Suspense, createContext, useState } from 'react';
 import { Router, Switch, Route, Redirect } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
-import { Register, Login, Dashboard, Quizzes } from './pages';
+import { Register, Login, Dashboard, Quizzes, Courses, Topics } from './pages';
 import { routes } from './constants';
 
 import './assets/styles/index.css';
@@ -32,6 +32,12 @@ const App = () => {
             </Route>
             <Route exact path={routes.quizzes} >
               <Quizzes />
+            </Route>
+            <Route exact path={routes.courses} >
+              <Courses />
+            </Route>
+            <Route exact path={routes.topics} >
+              <Topics />
             </Route>
             <Redirect to={routes.landing} />
           </Switch>
