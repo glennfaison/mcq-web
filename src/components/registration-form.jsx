@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { LabeledInput } from './labeled-input';
 import { routes } from '../constants';
-import { register, login } from '../api';
+import { register, login } from '../services/api';
 import { AppContext } from '../app';
 import { Checkbox } from './checkbox';
 

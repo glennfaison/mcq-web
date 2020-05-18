@@ -6,3 +6,4 @@ export * from './toolbar';
 export * from './kanban-card';
 export * from './checkbox';
 export * from './progress-bar';
+export * from './modal';

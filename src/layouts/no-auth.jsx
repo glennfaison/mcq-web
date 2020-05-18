@@ -5,7 +5,7 @@ export const NoAuthLayout = ({
   pageTitle, welcomeMessage, formComponent, altMessage, altText, altRoute
 }) => {
   return (
-    <div className="flex-grow flex flex-col md:flex-row">
+    <div className="flex flex-grow flex-col md:flex-row md:h-screen">
 
       {/* Left Pane */}
       <div className="flex-1 flex bg-black text-white">

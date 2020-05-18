@@ -1,5 +1,6 @@
 {
   "name": "mcq-web",
+  "description": "Web application for setting and sitting for multiple-choice question quizzes",
   "version": "0.1.0",
   "private": true,
   "author": {
