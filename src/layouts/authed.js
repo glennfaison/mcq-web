@@ -1,14 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Navbar } from '../components';
 import { Link } from 'react-router-dom';
 import { routes } from '../constants';
 
-function Icon({ iconId, title, url }) {
+function Icon ({ iconId, title, url }) {
   return (
     <Link to={url}>
       <span className="flex justify-center cursor-pointer
         border-transparent border-2 hover:border-black"
-        title={title}>
+      title={title}>
         <i className="material-icons text-3xl p-0 py-1">
           {iconId}
         </i>
@@ -20,9 +21,8 @@ function Icon({ iconId, title, url }) {
 export const AuthedLayout = ({
   pageTitle,
   navbarLinks,
-  content = false
+  content = false,
 }) => {
-
   return (
     <div className="flex flex-row h-screen">
 
@@ -36,7 +36,7 @@ export const AuthedLayout = ({
           <Icon iconId="account_circle" url={routes.courses} title="Courses" />
           <Icon iconId="account_circle" url={routes.topics} title="Topics" />
         </span>
-        
+
         <span className="flex flex-col">
           <Icon iconId="account_circle" url={routes.dashboard} title="Profile" />
           <Icon iconId="settings" url={routes.settings} title="Settings" />
@@ -58,4 +58,14 @@ export const AuthedLayout = ({
   );
 };
 
+Icon.propTypes = {
+  iconId: PropTypes.string,
+  title: PropTypes.string,
+  url: PropTypes.string,
+};
 
+AuthedLayout.propTypes = {
+  pageTitle: PropTypes.string,
+  navbarLinks: PropTypes.array,
+  content: PropTypes.any,
+};

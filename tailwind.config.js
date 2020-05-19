@@ -1,13 +1,13 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   plugins: [
     plugin(function ({ addVariant, e }) {
       addVariant('disabled', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
-          return `.${e(`disabled${separator}${className}`)}:disabled`
-        })
-      })
+          return `.${e(`disabled${separator}${className}`)}:disabled`;
+        });
+      });
     })
   ],
   variants: {
@@ -107,6 +107,6 @@ module.exports = {
     whitespace: ['responsive'],
     width: ['responsive'],
     wordBreak: ['responsive'],
-    zIndex: ['responsive'],
-  },
-}
+    zIndex: ['responsive']
+  }
+};

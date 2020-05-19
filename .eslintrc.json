@@ -16,7 +16,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": 11,
     "sourceType": "module"
   },
   "plugins": [
@@ -27,9 +27,10 @@
       2,
       "always"
     ],
-    "comma-dangle": "error",
-    "no-unused-expressions": "off",
+    "comma-dangle": "off",
+    "no-unused-expressions": "error",
     "camelcase": "off",
-    "no-unused-vars": [2, "error"]
+    "no-trailing-spaces": "error",
+    "no-unused-vars": "error"
   }
 }

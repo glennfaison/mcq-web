@@ -5,7 +5,7 @@ export const Toolbar = ({
   layouts,
   onLayoutChange,
   hasSelection = false,
-  onBulkDelete = () => {},
+  onBulkDelete = () => {}
 }) => {
   return (
     <div className="flex py-2 flex-wrap mx-4">

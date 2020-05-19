@@ -2,10 +2,15 @@ import React from 'react';
 
 export const Modal = ({
   show = false,
+  title,
+  body,
+  cancelBtnText,
+  okBtnText,
   onCancel = () => {},
   onSuccess = () => {},
 }) => {
   if (!show) { return <>{show}</>; }
+
   return (
     <>
       <div
@@ -14,47 +19,39 @@ export const Modal = ({
         <div className="relative w-auto my-6 mx-auto max-w-3xl">
           {/*content*/}
           <div className="border-0 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-            {/*header*/}
-            <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300">
-              <h3 className="text-3xl font-semibold">
-                Modal Title
+            
+          {/*header*/}
+            <div className="flex items-start justify-between p-4 border-b-2 border-black">
+              <h3 className="text-2xl font-semibold">
+                {title}
               </h3>
               <button
-                className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                onClick={onCancel}
-              >
-                <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                  ×
-                </span>
+                className="ml-auto text-4xl opacity-5 leading-none font-semibold focus:outline-none"
+                onClick={onCancel} >
+                ×
               </button>
             </div>
+            
             {/*body*/}
-            <div className="relative p-6 flex-auto">
-              <p className="my-4 text-gray-600 text-lg leading-relaxed">
-                I always felt like I could do anything. That’s the main
-                thing people are controlled by! Thoughts- their perception
-                of themselves! They're slowed down by their perception of
-                themselves. If you're taught you can’t do anything, you
-                won’t do anything. I was taught I could do everything.
+            <div className="relative p-4 flex-auto">
+              <p className="text-gray-600 text-lg leading-relaxed text-justify">
+                {body}
               </p>
             </div>
+            
             {/*footer*/}
-            <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300">
+            <div className="flex items-center justify-end py-2 px-4 border-t-2 border-black">
               <button
-                className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
-                type="button"
+                className="bg-white border-2 border-black active:bg-gray-400 font-bold text-sm px-4 py-2 shadow hover:shadow-lg mr-1 mb-1"
                 style={{ transition: "all .15s ease" }}
-                onClick={onCancel}
-              >
-                Close
+                onClick={onCancel} >
+                {cancelBtnText}
               </button>
               <button
-                className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                type="button"
+                className="bg-black border-2 border-black text-white active:bg-gray-400 font-bold text-sm px-4 py-2 shadow hover:shadow-lg mr-1 mb-1"
                 style={{ transition: "all .15s ease" }}
-                onClick={onSuccess}
-              >
-                Save Changes
+                onClick={onSuccess} >
+                {okBtnText}
               </button>
             </div>
           </div>

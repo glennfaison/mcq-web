@@ -9,5 +9,5 @@ export const routes = {
   register: '/register',
   root: '/',
   settings: '/settings',
-  topics: '/topics',
+  topics: '/topics'
 };
