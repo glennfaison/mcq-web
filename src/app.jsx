@@ -48,9 +48,3 @@ const App = () => {
 };
 
 export default App;
-
-/**
- * set location in child component
- * app state updates
- * 
-*/
