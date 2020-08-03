@@ -13,12 +13,30 @@ const listItems = new Array(11).fill().map((v, i) => {
   };
 });
 
+const headerMappings = {
+  "name": "Name",
+  "description": "Description",
+  "expiresAt": "Expires At",
+  "createdBy": "Created By",
+};
+
+const columnMappings = {
+  "name": (item) => item.name,
+  "description": (item) => item.description,
+  "expiresAt": (item) => item.expiresAt,
+  "createdBy": (item) => item.createdBy,
+};
+
 export const Quizzes = () => {
   return (
     <AuthedLayout
       pageTitle={process.env.REACT_APP_TITLE}
       navbarLinks={navbarLinks}
-      content={<ListviewHOC listItems={listItems} />}
+      content={
+        <ListviewHOC listItems={listItems}
+          headerMappings={headerMappings}
+          columnMappings={columnMappings}
+      />}
     />
   );
 };
