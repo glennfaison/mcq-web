@@ -15,6 +15,7 @@ export const ListviewHOC = ({
   listItems,
   headerMappings = {},
   columnMappings = { 'Items': (item) => JSON.stringify(item, null, 2) },
+  pageSize = 5,
 }) => {
   const [formattedItems, setFormattedItems] = useState(listItems);
   const filterItems = str => setFormattedItems(listItems.filter(i => i.name.includes(str)));
@@ -37,6 +38,7 @@ export const ListviewHOC = ({
           onSelectionChanged={setHasSelection}
           headerMappings={headerMappings}
           columnMappings={columnMappings}
+          pageSize={pageSize}
         />
       </div>
     </div>
