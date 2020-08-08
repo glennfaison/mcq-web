@@ -17,14 +17,18 @@ const headerMappings = {
   "name": "Name",
   "description": "Description",
   "expiresAt": "Expires At",
-  "createdBy": "Created By",
+  "actions": "Actions",
 };
 
 const columnMappings = {
   "name": (item) => item.name,
   "description": (item) => item.description,
-  "expiresAt": (item) => item.expiresAt,
-  "createdBy": (item) => item.createdBy,
+  "expiresAt": (item) => item.expiresAt.toString().substring(0, 10),
+  "actions": () => (
+    <div className="flex justify-around">
+      <button><i className="material-icons text-2xl p-0">open_in_full</i></button>
+    </div>
+  ),
 };
 
 export const Quizzes = () => {
