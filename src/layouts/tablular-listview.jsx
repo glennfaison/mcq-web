@@ -39,21 +39,21 @@ export const TabularListview = ({ listItems, headerMappings, columnMappings, pag
               <div className="flex justify-between">
                 <div>Page {pageNumber + 1} of {lastPage}</div>
                 <div>
-                  <button className="pb-0 pt-2 px-1 border-transparent border-2 hover:border-black">
+                  <button className="border-transparent border-2 hover:border-black">
                     <i className="material-icons text-2xl p-0"
                       onClick={() => setPageNumber(0)}>first_page</i>
                   </button>
-                  <button className="pb-0 pt-2 px-1 border-transparent border-2 hover:border-black"
+                  <button className="border-transparent border-2 hover:border-black"
                     disabled={pageNumber <= 0}>
                     <i className="material-icons text-2xl p-0"
                       onClick={() => setPageNumber(pageNumber - 1)}>chevron_left</i>
                   </button>
-                  <button className="pb-0 pt-2 px-1 border-transparent border-2 hover:border-black"
+                  <button className="border-transparent border-2 hover:border-black"
                     disabled={pageNumber >= lastPage}>
                     <i className="material-icons text-2xl p-0"
                       onClick={() => setPageNumber(pageNumber + 1)}>chevron_right</i>
                   </button>
-                  <button className="pb-0 pt-2 px-1 border-transparent border-2 hover:border-black">
+                  <button className="border-transparent border-2 hover:border-black">
                     <i className="material-icons text-2xl p-0"
                       onClick={() => setPageNumber(lastPage - 1)}>last_page</i>
                   </button>
