@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { JsonListview } from './json-listview';
-import { KanbanListview } from './kanban-listview';
+import { CardListview } from './card-listview';
 import { Toolbar } from '../components';
 import { listLayouts } from '../constants';
 import { TabularListview } from './tablular-listview';
 
 const layoutMap = {
   tabular: TabularListview,
-  kanban: KanbanListview,
+  card: CardListview,
   jsonListview: JsonListview,
 };
 
@@ -16,6 +16,7 @@ export const ListviewHOC = ({
   headerMappings = {},
   columnMappings = { 'Items': (item) => JSON.stringify(item, null, 2) },
   pageSize = 5,
+  cardComponent,
 }) => {
   const [formattedItems, setFormattedItems] = useState(listItems);
   const filterItems = str => setFormattedItems(listItems.filter(i => i.name.includes(str)));
@@ -39,6 +40,7 @@ export const ListviewHOC = ({
           headerMappings={headerMappings}
           columnMappings={columnMappings}
           pageSize={pageSize}
+          cardComponent={cardComponent}
         />
       </div>
     </div>
