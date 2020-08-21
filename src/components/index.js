@@ -5,6 +5,7 @@ export * from './navbar';
 export * from './toolbar';
 export * from './quiz-card';
 export * from './course-card';
+export * from './topic-card';
 export * from './checkbox';
 export * from './progress-bar';
 export * from './modal';

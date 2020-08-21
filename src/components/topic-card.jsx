@@ -2,7 +2,7 @@ import React from 'react';
 import { Checkbox } from './checkbox';
 // import { ProgressBar } from './progress-bar';
 
-export const CourseCard = ({
+export const TopicCard = ({
   item,
   onDeleteClicked = () => {},
   onUpdateClicked = () => {},
