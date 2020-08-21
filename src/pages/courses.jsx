@@ -2,6 +2,7 @@ import React from 'react';
 
 import { AuthedLayout, ListviewHOC } from '../layouts';
 import { navbarLinks } from '../constants';
+import { CourseCard } from '../components';
 
 const listItems = new Array(11).fill().map((v, i) => {
   return {
@@ -40,6 +41,7 @@ export const Courses = () => {
         <ListviewHOC listItems={listItems}
           headerMappings={headerMappings}
           columnMappings={columnMappings}
+          cardComponent={CourseCard}
       />}
     />
   );
